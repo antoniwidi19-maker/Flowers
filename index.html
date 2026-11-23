@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keindahan Dunia Bunga</title>
+    <style>
+        :root {
+            --primary-color: #ff6b81;
+            --secondary-color: #ff4757;
+            --bg-color: #fff0f3;
+            --card-bg: #ffffff;
+            --text-color: #2f3542;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            flex: 1;
+        }
+
+        .flower-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: floatCard 4s ease-in-out infinite alternate;
+        }
+
+        .flower-card:nth-child(even) {
+            animation-delay: 2s;
+        }
+
+        .flower-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(255, 107, 129, 0.3);
+        }
+
+        .flower-img-container {
+            height: 200px;
+            background-color: #ffe4e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animasi ikon bunga SVG */
+        .flower-icon {
+            font-size: 4rem;
+            animation: bloom 3s infinite alternate ease-in-out;
+        }
+
+        .flower-info {
+            padding: 20px;
+        }
+
+        .flower-info h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .flower-info p {
+            color: #57606f;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2f3542;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        /* Keyframes Animasi */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes floatCard {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+
+        @keyframes bloom {
+            0% { transform: scale(1) rotate(0deg); }
+            100% { transform: scale(1.1) rotate(5deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Keindahan Dunia Bunga</h1>
+        <p>Jelajahi berbagai jenis bunga eksotis beserta makna dan karakteristiknya</p>
+    </header>
+
+    <div class="container">
+        <!-- Kartu Bunga 1 -->
+        <div class="flower-card">
+            <div class="flower-img-container">
+                <div class="flower-icon">🌹</div>
+            </div>
+            <div class="flower-info">
+                <h3>Mawar Merah</h3>
+                <p>Simbol universal dari cinta dan gairah mendalam. Mawar merah memiliki aroma harum yang khas dan sering dijadikan hadiah spesial dalam momen romantis.</p>
+            </div>
+        </div>
+
+        <!-- Kartu Bunga 2 -->
+        <div class="flower-card">
+            <div class="flower-img-container">
+                <div class="flower-icon">🌻</div>
+            </div>
+            <div class="flower-info">
+                <h3>Bunga Matahari</h3>
+                <p>Terkenal karena ukurannya yang besar dan warnanya yang cerah menyerupai matahari. Bunga ini selalu menghadap ke arah matahari (fenomena heliotropisme).</p>
+            </div>
+        </div>
+
+        <!-- Kartu Bunga 3 -->
+        <div class="flower-card">
+            <div class="flower-img-container">
+                <div class="flower-icon">🌷</div>
+            </div>
+            <div class="flower-info">
+                <h3>Tulip</h3>
+                <p>Bunga asal Asia Tengah yang sangat populer di Belanda. Tulip melambangkan kasih sayang yang sempurna, kepedulian, dan awal yang baru.</p>
+            </div>
+        </div>
+
+        <!-- Kartu Bunga 4 -->
+        <div class="flower-card">
+            <div class="flower-img-container">
+                <div class="flower-icon">🌸</div>
+            </div>
+            <div class="flower-info">
+                <h3>Bunga Sakura</h3>
+                <p>Bunga nasional Jepang yang mekar di musim semi. Sakura melambangkan kerapuhan dan keindahan hidup yang singkat namun berharga.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Website Keindahan Bunga. Dibuat dengan penuh cinta.</p>
+    </footer>
+
+</body>
+</html>
